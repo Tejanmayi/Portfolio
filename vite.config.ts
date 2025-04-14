@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { fileURLToPath } from 'url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,8 +12,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
-    minify: 'terser',
     rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url))
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -24,13 +26,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src')
+      '@': '/src'
     }
-  },
-  esbuild: {
-    jsxInject: `import React from 'react'`
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', '@headlessui/react', '@heroicons/react']
   }
 })
