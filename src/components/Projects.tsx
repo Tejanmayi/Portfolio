@@ -35,11 +35,36 @@ const Projects = () => {
         "Data Studio visualizations",
         "Scalable cloud infrastructure"
       ]
+    },
+    {
+      title: "Reddit Community Insights Pipeline",
+      description: "A data pipeline that extracts posts and comments from Reddit's Data Engineering community, processes them using AWS services, and enables trend analysis and community insights through dbt transformations.",
+      technologies: ["Reddit API", "AWS S3", "Redshift", "dbt", "Airflow", "Terraform", "Git"],
+      features: [
+        "Data ingestion from Reddit API",
+        "Data transformation and loading into Redshift",
+        "dbt models for analytics",
+        "Airflow orchestration",
+        "Terraform infrastructure as code"
+      ]
+    },
+    {
+      title: "Prediction of Liver Disease Patients",
+      description: "Inspected and diagnosed the optimum preprocessing steps to be applied on liver patients data set achieving 95% accuracy in classification.",
+      technologies: ["Python", "R", "PySwarm", "J48", "Random Forest", "SVM", "pandas", "scikit-learn", "matplotlib", "seaborn"],
+      features: [
+        "Published in ERCICA'20, Vol 1",
+        "Data normalization",
+        "PySwarm optimization",
+        "Feature extraction",
+        "Classification algorithms",
+        "Secured 1st place in poster presentation"
+      ]
     }
   ];
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section flex items-center">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

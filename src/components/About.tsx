@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section flex items-center">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,16 +61,15 @@ const About = () => {
                 across full-stack development, data engineering, and cloud technologies.
               </p>
               <p className="text-gray-300 mb-4">
-                Currently pursuing my Master's degree at Stony Brook University, I combine
-                academic knowledge with practical experience to deliver innovative solutions.
+                I combine academic knowledge with practical experience to deliver innovative solutions.
                 I am passionate about creating efficient, user-friendly applications and
                 continuously expanding my technical skills.
               </p>
               <div className="mt-4">
                 <h4 className="text-lg font-semibold mb-2">Certifications</h4>
                 <ul className="list-disc list-inside text-gray-300 space-y-1">
-                  <li>AWS Cloud Practitioner</li>
-                  <li>Data Engineering, Big Data, and Machine Learning on GCP</li>
+                  <li><a href="https://www.credly.com/badges/a6499e72-161b-41a4-b003-e50bdcecf9c7/public_url">AWS Cloud Practitioner</a></li>
+                  <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QCRSSJTRJXXL">Data Engineering, Big Data, and Machine Learning on GCP</a></li>
                 </ul>
               </div>
             </div>

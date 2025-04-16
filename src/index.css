@@ -8,17 +8,17 @@
   }
   
   body {
-    @apply bg-primary text-white;
+    @apply bg-primary text-white min-h-screen w-full;
   }
 }
 
 @layer components {
   .section {
-    @apply min-h-screen py-20 px-4;
+    @apply min-h-screen py-20 px-6 md:px-12 lg:px-20 w-full;
   }
   
   .container {
-    @apply max-w-6xl mx-auto;
+    @apply w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20;
   }
   
   .heading {
@@ -68,8 +68,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -91,7 +91,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ffffff;
+  border-color: #00815a;
 }
 button:focus,
 button:focus-visible {
@@ -104,7 +104,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #ffffff;
+    color: #006b4a;
   }
   button {
     background-color: #f9f9f9;

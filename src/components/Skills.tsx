@@ -5,11 +5,11 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "SQL", "JavaScript", "Scala", "GoLang", "C/C++", "NoSQL", "TypeScript", "R"]
+      skills: ["Python", "SQL", "JavaScript", "Ruby on Rails", "Scala", "GoLang", "C/C++", "NoSQL", "TypeScript", "R"]
     },
     {
       title: "Technologies",
-      skills: ["Ruby", "RESTful API", "Kubernetes", "Hadoop", "Kafka", "Jenkins", "CI/CD", "AWS", "GCP"]
+      skills: ["RESTful API", "Kubernetes", "Hadoop", "Kafka", "Jenkins", "CI/CD", "MongoDB", "Redshift", "Postgres", "AWS", "GCP", "Databricks", "Jupyter Notebook"]
     },
     {
       title: "Frameworks",
@@ -17,7 +17,7 @@ const Skills = () => {
     },
     {
       title: "Tools",
-      skills: ["Git", "Docker", "Linux", "PostgreSQL", "MongoDB", "Airflow", "Tableau"]
+      skills: ["Git", "Docker", "Linux", "Rundeck", "Confluence", "Jira"]
     },
     {
       title: "Coursework",
@@ -33,11 +33,19 @@ const Skills = () => {
         "Agile",
         "Mathematics and Distributed Storage"
       ]
+    },
+    {
+      title: "Visualization Tools",
+      skills: [
+        "Tableau",
+        "PowerBI",
+        "Google Data Studio"
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section flex items-center">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -15,13 +15,13 @@ const Contact = () => {
     },
     {
       icon: <MapPinIcon className="h-6 w-6" />,
-      text: "Stony Brook, NY",
-      link: "https://maps.google.com/?q=Stony+Brook+NY"
+      text: "New York",
+      link: "https://maps.google.com/?q=New+York"
     }
   ];
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section flex items-center">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Contact = () => {
                     </svg>
                   </motion.a>
                   <motion.a
-                    href="https://github.com/tejanmayi-gummaraju"
+                    href="https://github.com/tejanmayi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-white transition-colors"
