@@ -12,7 +12,8 @@ const Projects = () => {
         "Fine-tuned RoBERTa model for depression classification",
         "Secure user authentication and data storage",
         "Responsive and accessible user interface"
-      ]
+      ],
+      githubUrl: "https://github.com/tejanmayi/mental-health-assistant"
     },
     {
       title: "Multi-Language Morse Code Converter",
@@ -23,7 +24,8 @@ const Projects = () => {
         "Real-time speech-to-text conversion",
         "Error handling for language processing",
         "User-friendly interface"
-      ]
+      ],
+      githubUrl: "https://github.com/tejanmayi/morse-decoder"
     },
     {
       title: "Musicverse: Real-Time Analytics Pipeline",
@@ -34,7 +36,8 @@ const Projects = () => {
         "User behavior analysis",
         "Data Studio visualizations",
         "Scalable cloud infrastructure"
-      ]
+      ],
+      githubUrl: "https://github.com/tejanmayi/Musicverse"
     },
     {
       title: "Reddit Community Insights Pipeline",
@@ -46,7 +49,8 @@ const Projects = () => {
         "dbt models for analytics",
         "Airflow orchestration",
         "Terraform infrastructure as code"
-      ]
+      ],
+      githubUrl: "https://github.com/tejanmayi/Reddit-API-Pipeline"
     },
     {
       title: "Prediction of Liver Disease Patients",
@@ -59,7 +63,8 @@ const Projects = () => {
         "Feature extraction",
         "Classification algorithms",
         "Secured 1st place in poster presentation"
-      ]
+      ],
+      githubUrl: "https://github.com/tejanmayi"
     }
   ];
 
@@ -83,9 +88,19 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-center mb-4">
-                  <CodeBracketIcon className="h-6 w-6 text-accent mr-2" />
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <CodeBracketIcon className="h-6 w-6 text-accent mr-2" />
+
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 transition-colors"
+                    >
+                      <h3 className="text-xl font-semibold text-white hover:text-accent/80 transition-colors">{project.title}</h3>
+                    </a>
+                  </div>
                 </div>
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <div className="mb-4">
@@ -102,10 +117,10 @@ const Projects = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features</h4>
-                  <ul className="list-disc list-inside space-y-1 text-gray-300">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Features</h4>
+                  <ul className="list-disc list-inside text-gray-300 space-y-1">
                     {project.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm">{feature}</li>
+                      <li key={idx}>{feature}</li>
                     ))}
                   </ul>
                 </div>

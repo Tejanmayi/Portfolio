@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {
+  const formRef = useRef(null);
   const contactInfo = [
     {
       icon: <EnvelopeIcon className="h-6 w-6" />,
@@ -19,6 +22,25 @@ const Contact = () => {
       link: "https://maps.google.com/?q=New+York"
     }
   ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID,      
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,     
+      formRef.current,
+      NEXT_PUBLIC_EMAILJS_PUBLIC_KEY       
+    )
+    .then((result) => {
+      console.log(result.text);
+      alert('Message sent successfully!');
+      e.target.reset();
+    }, (error) => {
+      console.log(error.text);
+      alert('Failed to send message.');
+    });
+  };
 
   return (
     <section id="contact" className="section flex items-center">
@@ -94,7 +116,7 @@ const Contact = () => {
 
             <div className="card">
               <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-              <form className="space-y-4">
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                     Name
