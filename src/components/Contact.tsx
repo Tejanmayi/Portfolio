@@ -26,6 +26,11 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Log the environment variables (they will be undefined in production, but we can check if they're being accessed)
+    console.log('EmailJS Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+    console.log('EmailJS Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+    console.log('EmailJS Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+
     emailjs.sendForm(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,      
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,     
@@ -33,12 +38,17 @@ const Contact = () => {
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY       
     )
     .then((result) => {
-      console.log(result.text);
+      console.log('Email sent successfully:', result);
       alert('Message sent successfully!');
       e.target.reset();
     }, (error) => {
-      console.log(error.text);
-      alert('Failed to send message.');
+      console.error('Email sending failed:', error);
+      console.error('Error details:', {
+        status: error.status,
+        text: error.text,
+        message: error.message
+      });
+      alert('Failed to send message. Please try again later.');
     });
   };
 
