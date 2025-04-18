@@ -71,9 +71,6 @@ This project is deployed on Vercel. Any push to the main branch will automatical
 - Modify the color scheme in `tailwind.config.js`
 - Add or remove sections as needed
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Contact
 

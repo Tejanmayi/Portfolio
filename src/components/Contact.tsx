@@ -1,16 +1,10 @@
 import { motion } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {
   const formRef = useRef(null);
-
-  useEffect(() => {
-    // Initialize EmailJS with the public key
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
-  }, []);
-
   const contactInfo = [
     {
       icon: <EnvelopeIcon className="h-6 w-6" />,
