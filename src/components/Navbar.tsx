@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
+    { name: 'GitHub', href: 'https://github.com/Tejanmayi'},
   ];
 
   return (
@@ -42,6 +43,10 @@ const Navbar = () => {
                 className="text-gray-300 hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                {...(item.name === 'GitHub' && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
               >
                 {item.name}
               </motion.a>
@@ -78,6 +83,10 @@ const Navbar = () => {
                   href={item.href}
                   className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
                   onClick={() => setIsOpen(false)}
+                  {...(item.name === 'GitHub' && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
                 >
                   {item.name}
                 </a>
