@@ -4,6 +4,21 @@ import { CodeBracketIcon } from '@heroicons/react/24/outline';
 const Projects = () => {
   const projects = [
     {
+      title: "Contacts and Notes CRUD API",
+      description: "Secure RESTful Notes and Contacts management service with JWT authentication, CRUD support, rate limiting, retries, and field normalization.",
+      technologies: ["FastAPI", "Python", "PostgreSQL", "JWT", "Pydantic", "REST"],
+      features: [
+        "JWT-based authentication",
+        "CRUD operations for Contacts and Notes",
+        "Rate limiting with exponential backoff",
+        "Event-driven note processing using Celery",
+        "Field normalization for note data",
+        "Comprehensive error handling",
+        "Interactive API documentation (Swagger UI)",
+      ],
+      githubUrl: "https://github.com/Tejanmayi/contacts-notes-crud-api"
+    },
+    {
       title: "Mental Health Assistant",
       description: "A full stack mental health assistant web application using React, Node.js, and PostgreSQL, featuring a fine-tuned RoBERTa model for depression classification.",
       technologies: ["React", "Node.js", "PostgreSQL", "LLM", "Machine Learning"],
