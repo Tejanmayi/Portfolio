@@ -132,7 +132,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-400 text-accent mb-2">Features</h4>
+                  <h4 className="text-sm font-semibold text-accent mb-2">Features</h4>
                   <ul className="list-disc list-inside text-gray-300 space-y-1">
                     {project.features.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
