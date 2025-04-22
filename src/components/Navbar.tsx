@@ -40,7 +40,9 @@ const Navbar = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white transition-colors"
+                className={`hover:text-white transition-colors ${
+                  item.name === 'GitHub' ? 'text-accent' : 'text-gray-300'
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 {...(item.name === 'GitHub' && {
