@@ -31,6 +31,21 @@ const Projects = () => {
       githubUrl: "https://github.com/tejanmayi/mental-health-assistant"
     },
     {
+      "title": "Personalized Roadmap Progress Tracking API",
+      "description": "A cloud-based API for creating, managing, and tracking personalized learning roadmaps with JWT authentication, caching, and detailed analytics.",
+      "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Swagger", "NodeCache"],
+      "features": [
+        "JWT-based user authentication",
+        "Create, update, and manage personalized learning roadmaps",
+        "Resource management with support for multiple types",
+        "Progress tracking with module completion, achievement system",
+        "Analytics dashboard for progress statistics and resource usage",
+        "Caching for frequently accessed data and optimistic locking",
+        "Interactive API documentation (Swagger UI)"
+      ],
+      "githubUrl": "https://github.com/tejanmayi/personalized-roadmap-api"
+    },
+    {
       title: "Multi-Language Morse Code Converter",
       description: "An innovative application that converts speech to Morse code and supports translation across multiple languages.",
       technologies: ["Python", "pyaudio", "gTTS", "Google Cloud APIs"],
