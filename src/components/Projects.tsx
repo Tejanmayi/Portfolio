@@ -43,7 +43,7 @@ const Projects = () => {
         "Caching for frequently accessed data and optimistic locking",
         "Interactive API documentation (Swagger UI)"
       ],
-      "githubUrl": "https://github.com/tejanmayi/personalized-roadmap-api"
+      "githubUrl": "https://github.com/Tejanmayi/Personalized-Roadmap-Progress-Tracking-API"
     },
     {
       title: "Multi-Language Morse Code Converter",
